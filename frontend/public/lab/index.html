@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab 1a-1e: JavaScript and the DOM</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 760px; margin: 20px auto; padding: 0 12px; }
+    section { border: 1px solid #ddd; border-radius: 8px; padding: 12px; margin-bottom: 14px; }
+    h2 { margin-top: 0; font-size: 18px; }
+    button { padding: 6px 12px; margin: 4px 4px 4px 0; cursor: pointer; }
+    .highlight { background: #fde68a; }
+    .output { margin-top: 8px; padding: 6px; background: #f1f5f9; min-height: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Standalone JavaScript programs (1a - 1e)</h1>
+  <p>Plain HTML + JavaScript, no React. Open the browser console (F12) to see the console.log output.</p>
+
+  <!-- 1a - the status text below is filled by script.js, which proves the JS file is linked -->
+  <section id="sec-1a" data-lab="1a">
+    <h2>1a. Linking a JavaScript file with the HTML page</h2>
+    <p>This page links <code>script.js</code> with a &lt;script src="script.js"&gt; tag at the bottom of the body.</p>
+    <div id="linkStatus" class="output">Waiting for script.js...</div>
+  </section>
+
+  <!-- 1b - selectors -->
+  <section id="sec-1b" data-lab="1b">
+    <h2>1b. Selecting elements using selectors</h2>
+    <p class="demo-text">Paragraph one (class demo-text)</p>
+    <p class="demo-text">Paragraph two (class demo-text)</p>
+    <p id="uniqueText">Paragraph with id uniqueText</p>
+    <button id="btnSelect">Run the selectors</button>
+    <div id="selectOutput" class="output"></div>
+  </section>
+
+  <!-- 1c - event listeners -->
+  <section id="sec-1c" data-lab="1c">
+    <h2>1c. Event listeners</h2>
+    <input id="nameInput" placeholder="Type here (input event)" />
+    <div id="hoverBox" class="output">Move the mouse over this box (mouseover / mouseout events)</div>
+    <div id="listenerOutput" class="output"></div>
+  </section>
+
+  <!-- 1d - click events of buttons -->
+  <section id="sec-1d" data-lab="1d">
+    <h2>1d. Handling click events of HTML button elements</h2>
+    <button onclick="inlineClick()">Inline onclick button</button>
+    <button id="btnProperty">Property onclick button</button>
+    <button id="btnListener">addEventListener button</button>
+    <div id="clickOutput" class="output"></div>
+  </section>
+
+  <!-- 1e - three types of functions -->
+  <section id="sec-1e" data-lab="1e">
+    <h2>1e. Function declaration, function definition (expression) and arrow function</h2>
+    <button id="btnFunctions">Run the three functions</button>
+    <div id="functionOutput" class="output"></div>
+  </section>
+
+  <!-- 1a - HERE the JavaScript file is linked with the HTML page -->
+  <script src="script.js" defer></script>
+  <!-- Labels (only visible when frontend/src/labels/labels.js is uncommented) -->
+  <script type="module" src="lab-labels.js"></script>
+</body>
+</html>
